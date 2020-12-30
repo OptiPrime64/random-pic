@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Static Template</title>
+</head>
+
+<body>
+  <button onclick="myFunction()">Get a random image</button>
+  <br>
+  <img id="demo" src="images/ss0.jpg" width="400"></img>
+  <p id="number">0<p>
+
+  <script>
+    var myPix = ["ss0.jpg", "ss1.jpg", "ss2.jpg"];
+
+    function myFunction() {
+      let randomPic = Math.floor(Math.random() * myPix.length);
+      document.getElementById("demo").src = "images/" + myPix[randomPic];
+      document.getElementById("number").innerHTML = randomPic;
+      console.log(randomPic)
+    }
+  </script>
+</body>
+
+</html>
